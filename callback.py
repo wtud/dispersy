@@ -140,6 +140,8 @@ class Callback(object):
         """
         Returns True when called on this Callback thread.
         """
+        #_logger = get_logger(__name__)
+        #_logger.error("_thread_ident=%s; get_ident()=%s; Same? %s" % (self._thread_ident, get_ident(), "YES" if self._thread_ident == get_ident() else "NO"))
         return self._thread_ident == get_ident()
 
     @property
